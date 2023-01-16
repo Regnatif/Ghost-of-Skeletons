@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/arial.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/aboutGameScript.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 31
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 42
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0.694118, 0.647059, 0.647059, 1 )
+margin_left = 16.0
+margin_top = 56.0
+margin_right = 1070.0
+margin_bottom = 231.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Basically Undertale sans fight but only the blaster part, the objective is survive as many second as you can."
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+modulate = Color( 0.419608, 0.658824, 0.0313726, 1 )
+margin_left = 16.0
+margin_top = 449.0
+margin_right = 1012.0
+margin_bottom = 541.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "The lightnings you see in the game is just for the visulations it does not do any damage."
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+modulate = Color( 0.592157, 0.356863, 0.027451, 1 )
+margin_left = 16.0
+margin_top = 520.0
+margin_right = 1022.0
+margin_bottom = 598.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "The background music is Grimm Troupe OST (from Hollow Knight because who plays Undertale when there is HK)"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+modulate = Color( 0.694118, 0.647059, 0.647059, 1 )
+margin_left = 16.0
+margin_top = 288.0
+margin_right = 1070.0
+margin_bottom = 491.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "There will be spawning creatures in random positions, after a second they fire a beam, try to avoid the beams and survive as much as you can."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0.552941, 1, 1 )
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 900.0
+margin_bottom = 79.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "For who is familier with Undertale game:"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+modulate = Color( 0.686275, 0.207843, 0.466667, 1 )
+margin_left = 16.0
+margin_top = 240.0
+margin_right = 990.0
+margin_bottom = 326.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "For who is NOT familier with Undertale game:"
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 878.0
+margin_top = 3.0
+margin_right = 1015.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 3 )
+text = "BACK"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
